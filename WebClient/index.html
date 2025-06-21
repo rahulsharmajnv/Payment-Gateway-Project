@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Welcome to Our Store</h1>
+    <h2>Our Products</h2>
+    <div id="product-list"></div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Wireless Headphones", price: 499 },
+            { id: 2, name: "Bluetooth Speaker", price: 799 },
+            { id: 3, name: "Smart Watch", price: 1299 }
+        ];
+
+        const productListDiv = document.getElementById('product-list');
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
+            productDiv.onclick = () => {
+                location.href = `checkout.html?productId=${product.id}&amount=${product.price}`;
+            };
+            productDiv.innerHTML = `
+                <h2>${product.name}</h2>
+                <p>Price: ₹${product.price}</p>
+                <button>Buy Now</button>
+            `;
+            productListDiv.appendChild(productDiv);
+        });
+    </script>
+    <script src="js/api.js"></script>   
+</body>
+</html>

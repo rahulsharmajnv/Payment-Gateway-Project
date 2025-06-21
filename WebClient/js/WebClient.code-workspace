@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "TestDB",
+			"path": "../../../../Projects/AsyncFileProcessingWebApi/TestDB"
+		}
+	],
+	"settings": {}
+}

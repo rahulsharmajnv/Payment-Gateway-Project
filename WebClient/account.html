@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Account</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <h1>My Wallet</h1>
+  <p id="balance"></p>
+  <h2>Transaction History</h2>
+  <ul id="transactions"></ul>
+  <button onclick="location.href='welcome.html'">Back</button>
+
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const res = await get('/account/info', true);
+      document.getElementById('balance').textContent = `Balance: ₹${res.balance}`;
+
+      const txList = document.getElementById('transactions');
+      res.transactions.forEach(tx => {
+        const li = document.createElement('li');
+        li.textContent = `${tx.date} - ₹${tx.amount} - ${tx.status}`;
+        txList.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>

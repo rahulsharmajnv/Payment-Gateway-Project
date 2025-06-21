@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <h1 id="welcomeText">Welcome, user!</h1>
+  <div>
+    <button onclick="location.href='index.html'">Start Shopping</button>
+    <button onclick="location.href='account.html'">My Account</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) return (location.href = 'login.html');
+
+        const res = await get('/user/me', true);
+        document.getElementById('welcomeText').textContent = `Welcome, ${res.name || 'User'}!`;
+      } catch (err) {
+        alert('Session expired. Please login again.');
+        localStorage.removeItem('token');
+        location.href = 'login.html';
+      }
+    });
+
+    function logout() {
+      localStorage.removeItem('token');
+      location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

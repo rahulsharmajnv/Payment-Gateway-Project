@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gQkpnbg5oC3yN08kbow0vJIVyXEhdCqNyg4Oomw4OQU=",
+  "Source": "EcommerceBackend.Api",
+  "BasePath": "_content/EcommerceBackend.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

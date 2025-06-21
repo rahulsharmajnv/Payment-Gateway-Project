@@ -1,0 +1,96 @@
+/* Reset and base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+/* Container */
+body > * {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+/* Product cards */
+.product {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  background-color: #fafafa;
+}
+
+.product:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product h2 {
+  margin: 0 0 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 5px 0 0;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0b58d0;
+}
+
+/* Form Styling */
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Transaction List */
+ul {
+  padding-left: 20px;
+}
+
+ul#transactions li {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 4px;
+  list-style: none;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #2c3e50;
+}
