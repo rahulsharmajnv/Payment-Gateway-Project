@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Vb4ajqoSdrnPEC904s4nOeyJ4JNbjy9Y7Gh895CdMhE=",
+  "Source": "ExternalPaymentAPI",
+  "BasePath": "_content/ExternalPaymentAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
